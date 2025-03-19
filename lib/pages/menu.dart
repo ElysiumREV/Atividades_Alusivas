@@ -8,6 +8,7 @@ class MenuPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children:[
+          SizedBox(height: 25),
           ElevatedButton(onPressed: () {
             Navigator.pop(context);
           }, child: BackButton()),
