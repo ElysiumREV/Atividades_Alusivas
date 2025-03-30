@@ -28,6 +28,7 @@ class JaneiroPage extends StatelessWidget {
                   fontFamily: 'Puritan',
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 16),
             Divider(color: Color.fromRGBO(0, 126, 167, 1.0),
@@ -57,10 +58,13 @@ class JaneiroPage extends StatelessWidget {
                   color: Colors.white),
               textAlign: TextAlign.justify,
             ),
-            SizedBox(height: 32),
+            SizedBox(height: 16),
+            Divider(color: Color.fromRGBO(0, 126, 167, 1.0),
+                thickness: 1),
+            SizedBox(height: 16),
             Center(
               child: Image.asset('assets/images/UnisagradoPequeno.png',
-                  height: 40), // Adicione a logo na pasta assets
+                  height: 40),
             ),
           ],
         ),
