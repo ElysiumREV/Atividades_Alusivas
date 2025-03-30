@@ -53,15 +53,31 @@ flutter:
   assets:
     - assets/images/
   fonts:
-    - family: Amaranth
+    - family: Monda
       fonts:
-        - asset: fonts/Amaranth-Regular.ttf
+        - asset: fonts/Monda-Regular.ttf
           weight: 400
-        - asset: fonts/Amaranth-Bold.ttf
+        - asset: fonts/Monda-Medium.ttf
+          weight: 500
+        - asset: fonts/Monda-Bold.ttf
           weight: 700
-        - asset: fonts/Amaranth-BoldItalic.ttf
+        - asset: fonts/Monda-SemiBold.ttf
+          weight: 600
+    - family: Puritan
+      fonts:
+        - asset: fonts/Puritan-Bold.ttf
+          weight: 700
+        - asset: fonts/Puritan-BoldItalic.ttf
           weight: 700
           style: italic
-        - asset: fonts/Amaranth-Italic.ttf
+        - asset: fonts/Puritan-Italic.ttf
           weight: 400
           style: italic
+        - asset: fonts/Puritan-Regular.ttf
+          weight: 400
+    - family: Sarala
+      fonts:
+        - asset: fonts/Sarala-Bold.ttf
+          weight: 700
+        - asset: fonts/Sarala-Regular.ttf
+          weight: 400

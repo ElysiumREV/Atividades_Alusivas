@@ -1,4 +1,5 @@
 import 'package:atividades_alusivas/main.dart';
+import '/pages/meses/meses.dart';
 import 'package:flutter/material.dart';
 
 class MenuPage extends HomePage {
@@ -27,7 +28,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => JaneiroPage()),
+                                  );
                                 },
                                 child: Text('Janeiro'),
                               ),
@@ -37,7 +41,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => FevereiroPage()),
+                                  );
                                 },
                                 child: Text('Fevereiro'),
                               ),
@@ -47,7 +54,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => MarcoPage()),
+                                  );
                                 },
                                 child: Text('Março'),
                               ),
@@ -57,7 +67,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => AbrilPage()),
+                                  );
                                 },
                                 child: Text('Abril'),
                               ),
@@ -67,7 +80,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => MaioPage()),
+                                  );
                                 },
                                 child: Text('Maio'),
                               ),
@@ -77,7 +93,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => JunhoPage()),
+                                  );
                                 },
                                 child: Text('Junho'),
                               ),
@@ -87,7 +106,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => JulhoPage()),
+                                  );
                                 },
                                 child: Text('Julho'),
                               ),
@@ -97,7 +119,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => AgostoPage()),
+                                  );
                                 },
                                 child: Text('Agosto'),
                               ),
@@ -107,7 +132,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => SetembroPage()),
+                                  );
                                 },
                                 child: Text('Setembro'),
                               ),
@@ -117,7 +145,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => OutubroPage()),
+                                  );
                                 },
                                 child: Text('Outubro'),
                               ),
@@ -127,7 +158,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => NovembroPage()),
+                                  );
                                 },
                                 child: Text('Novembro'),
                               ),
@@ -137,7 +171,10 @@ class MenuPage extends HomePage {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => DezembroPage()),
+                                  );
                                 },
                                 child: Text('Dezembro'),
                               ),
