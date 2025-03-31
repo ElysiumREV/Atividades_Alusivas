@@ -116,7 +116,7 @@ class MaioPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Divider(color: Color.fromRGBO(0, 126, 167, 1.0),
-                thickness: 1),
+                thickness: 3),
             SizedBox(height: 16),
             Center(
               child: Image.asset('assets/images/UnisagradoPequeno.png',
