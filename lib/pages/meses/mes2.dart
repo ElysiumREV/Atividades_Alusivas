@@ -10,7 +10,7 @@ class FevereiroPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
         elevation: 0,
-        title: Text("Fevereiro",
+        title: Text('Fevereiro',
             style: TextStyle(fontSize: 32,
                 color: Colors.white,
                 fontFamily: 'Monda',
@@ -23,7 +23,7 @@ class FevereiroPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Primeira semana - Semana Nacional de prevenção da gravidez na adolescência",
+              'Primeira semana - Semana Nacional de prevenção da gravidez na adolescência',
               style: TextStyle(fontSize: 20,
                   fontFamily: 'Puritan',
                   fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class FevereiroPage extends StatelessWidget {
                 thickness: 1),
             SizedBox(height: 16),
             Text(
-              "A Semana Nacional de Prevenção da Gravidez na Adolescência acontece na primeira semana de fevereiro e tem o objetivo de levar informação para os adolescentes sobre os desafios de uma gravidez precoce. Essa é uma fase da vida cheia de descobertas, em que é importante aprender sobre o próprio corpo, responsabilidades e escolhas.",
+              'A Semana Nacional de Prevenção da Gravidez na Adolescência acontece na primeira semana de fevereiro e tem o objetivo de levar informação para os adolescentes sobre os desafios de uma gravidez precoce. Essa é uma fase da vida cheia de descobertas, em que é importante aprender sobre o próprio corpo, responsabilidades e escolhas.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class FevereiroPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              "Durante essa semana, escolas, profissionais de saúde e a comunidade falam sobre a importância do planejamento, do diálogo e da educação para que os jovens possam tomar decisões conscientes sobre seu futuro. A ideia não é apenas evitar uma gravidez indesejada, mas também garantir que todos tenham acesso ao conhecimento e ao apoio necessário para crescer com segurança e bem-estar.",
+              'Durante essa semana, escolas, profissionais de saúde e a comunidade falam sobre a importância do planejamento, do diálogo e da educação para que os jovens possam tomar decisões conscientes sobre seu futuro. A ideia não é apenas evitar uma gravidez indesejada, mas também garantir que todos tenham acesso ao conhecimento e ao apoio necessário para crescer com segurança e bem-estar.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,

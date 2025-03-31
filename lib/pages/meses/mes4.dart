@@ -10,7 +10,7 @@ class AbrilPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
         elevation: 0,
-        title: Text("Abril",
+        title: Text('Abril',
             style: TextStyle(fontSize: 32,
                 color: Colors.white,
                 fontFamily: 'Monda',
@@ -23,7 +23,7 @@ class AbrilPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Dia 25 - Semana Municipal de Alienação Parental",
+              'Dia 25 - Semana Municipal de Alienação Parental',
               style: TextStyle(fontSize: 20,
                   fontFamily: 'Puritan',
                   fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class AbrilPage extends StatelessWidget {
                 thickness: 1),
             SizedBox(height: 16),
             Text(
-              "A Semana Municipal de Conscientização sobre a Alienação Parental, que começa no dia 25 de abril, tem o objetivo de informar sobre os impactos da alienação parental na vida das crianças e adolescentes.",
+              'A Semana Municipal de Conscientização sobre a Alienação Parental, que começa no dia 25 de abril, tem o objetivo de informar sobre os impactos da alienação parental na vida das crianças e adolescentes.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class AbrilPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              "A alienação parental acontece quando um dos responsáveis tenta afastar a criança ou adolescente do outro responsável, falando coisas ruins sobre ele ou impedindo a convivência. Isso pode causar tristeza, insegurança e até dificuldades emocionais no futuro.",
+              'A alienação parental acontece quando um dos responsáveis tenta afastar a criança ou adolescente do outro responsável, falando coisas ruins sobre ele ou impedindo a convivência. Isso pode causar tristeza, insegurança e até dificuldades emocionais no futuro.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,
@@ -67,7 +67,7 @@ class AbrilPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              "Durante essa semana, são promovidas conversas e atividades para ajudar as famílias a entenderem que o mais importante é o bem-estar da criança. O amor e o respeito entre todos são essenciais para um crescimento saudável e feliz.",
+              'Durante essa semana, são promovidas conversas e atividades para ajudar as famílias a entenderem que o mais importante é o bem-estar da criança. O amor e o respeito entre todos são essenciais para um crescimento saudável e feliz.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,

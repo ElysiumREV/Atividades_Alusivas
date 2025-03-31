@@ -10,7 +10,7 @@ class MarcoPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
         elevation: 0,
-        title: Text("Março",
+        title: Text('Março',
             style: TextStyle(fontSize: 32,
                 color: Colors.white,
                 fontFamily: 'Monda',
@@ -23,7 +23,7 @@ class MarcoPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Dia 8 - Semana Municipal da Mulher",
+              'Dia 8 - Semana Municipal da Mulher',
               style: TextStyle(fontSize: 20,
                   fontFamily: 'Puritan',
                   fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class MarcoPage extends StatelessWidget {
                 thickness: 1),
             SizedBox(height: 16),
             Text(
-              "A Semana Municipal da Mulher, que começa no dia 8 de março, é um momento especial para refletir sobre a importância das mulheres na sociedade. Durante essa semana, são promovidas ações para valorizar as conquistas das mulheres, falar sobre igualdade de direitos e incentivar o respeito em todas as áreas da vida, como no trabalho, na família e na escola.",
+              'A Semana Municipal da Mulher, que começa no dia 8 de março, é um momento especial para refletir sobre a importância das mulheres na sociedade. Durante essa semana, são promovidas ações para valorizar as conquistas das mulheres, falar sobre igualdade de direitos e incentivar o respeito em todas as áreas da vida, como no trabalho, na família e na escola.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class MarcoPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              "Também é uma oportunidade para aprender sobre a história de mulheres que fizeram a diferença no mundo e entender como todos podem ajudar a construir um futuro mais justo e sem desigualdades de gênero. O respeito e a valorização das mulheres devem acontecer todos os dias, mas essa semana reforça a importância desse tema.",
+              'Também é uma oportunidade para aprender sobre a história de mulheres que fizeram a diferença no mundo e entender como todos podem ajudar a construir um futuro mais justo e sem desigualdades de gênero. O respeito e a valorização das mulheres devem acontecer todos os dias, mas essa semana reforça a importância desse tema.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,

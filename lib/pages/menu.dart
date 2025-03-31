@@ -8,7 +8,17 @@ class MenuPage extends HomePage {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Escolher Mês')),
+      backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
+          elevation: 0,
+          title: Text('Escolher Mês',
+              style: TextStyle(fontSize: 32,
+                  color: Colors.white,
+                  fontFamily: 'Monda',
+                  fontWeight: FontWeight.bold)),
+          centerTitle: true,
+        ),
         body: SafeArea(
           child: OrientationBuilder(
             builder: (context, orientation) {

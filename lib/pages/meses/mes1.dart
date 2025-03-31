@@ -10,7 +10,7 @@ class JaneiroPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
         elevation: 0,
-        title: Text("Janeiro",
+        title: Text('Janeiro',
             style: TextStyle(fontSize: 32,
             color: Colors.white,
             fontFamily: 'Monda',
@@ -23,7 +23,7 @@ class JaneiroPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Dia 29 - Dia Nacional da Visibilidade Trans",
+              'Dia 29 - Dia Nacional da Visibilidade Trans',
               style: TextStyle(fontSize: 20,
                   fontFamily: 'Puritan',
                   fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class JaneiroPage extends StatelessWidget {
                 thickness: 1),
             SizedBox(height: 16),
             Text(
-              "O Dia Nacional da Visibilidade Trans, comemorado em 29 de janeiro, é um momento importante para falar sobre o respeito e os direitos das pessoas trans. Pessoas trans são aquelas que não se identificam com o gênero que lhes foi atribuído ao nascer. Essa data foi criada para lembrar que todos devem ser tratados com igualdade e dignidade, independente de como se identificam.",
+              'O Dia Nacional da Visibilidade Trans, comemorado em 29 de janeiro, é um momento importante para falar sobre o respeito e os direitos das pessoas trans. Pessoas trans são aquelas que não se identificam com o gênero que lhes foi atribuído ao nascer. Essa data foi criada para lembrar que todos devem ser tratados com igualdade e dignidade, independente de como se identificam.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class JaneiroPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              "Além disso, o dia reforça a importância de combater o preconceito e garantir que todas as pessoas trans possam viver de forma segura, estudar, trabalhar e serem felizes, como qualquer outra pessoa. É uma oportunidade para aprender mais sobre diversidade e sobre como o respeito torna o mundo um lugar melhor para todos.",
+              'Além disso, o dia reforça a importância de combater o preconceito e garantir que todas as pessoas trans possam viver de forma segura, estudar, trabalhar e serem felizes, como qualquer outra pessoa. É uma oportunidade para aprender mais sobre diversidade e sobre como o respeito torna o mundo um lugar melhor para todos.',
               style: TextStyle(fontSize: 16,
                   fontFamily: 'Sarala',
                   fontWeight: FontWeight.bold,

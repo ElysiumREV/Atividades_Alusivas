@@ -21,6 +21,25 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
+        title: Flexible(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              "Calendário de Atividades Alusivas Anual",
+              style: TextStyle(
+                fontSize: 32,
+                fontFamily: 'Monda',
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
