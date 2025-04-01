@@ -7,14 +7,20 @@ class CreditsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(0, 23, 31, 1.0),
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
+        backgroundColor: const Color.fromRGBO(0, 23, 31, 1.0),
         elevation: 0,
-        title: Text('Créditos',
-            style: TextStyle(fontSize: 32,
-                color: Colors.white,
-                fontFamily: 'Monda',
-                fontWeight: FontWeight.bold)),
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Text(
+          'Créditos',
+          style: TextStyle(
+            fontSize: 32,
+            color: Colors.white,
+            fontFamily: 'Monda',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -42,7 +48,15 @@ class CreditsPage extends StatelessWidget {
                             Image.asset('assets/images/nyx.png'),
                             TextButton(
                               onPressed: (_launchUrlNyx),
-                              child: Text('Contato'),
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
+                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              child: const Text(
+                                'Contato',
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           ],
                         ),
@@ -51,7 +65,15 @@ class CreditsPage extends StatelessWidget {
                             Image.asset('assets/images/darkzin.png'),
                             TextButton(
                               onPressed: (_launchUrlDarkzin),
-                              child: Text('Contato'),
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
+                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              child: const Text(
+                                'Contato',
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           ],
                         ),
@@ -60,7 +82,15 @@ class CreditsPage extends StatelessWidget {
                             Image.asset('assets/images/terra.png'),
                             TextButton(
                               onPressed: (_launchUrlTerra),
-                              child: Text('Contato'),
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
+                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              child: const Text(
+                                'Contato',
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           ],
                         ),
@@ -69,7 +99,15 @@ class CreditsPage extends StatelessWidget {
                             Image.asset('assets/images/ely.png'),
                             TextButton(
                               onPressed: (_launchUrlEly),
-                              child: Text('Contato'),
+                              style: TextButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
+                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              child: const Text(
+                                'Contato',
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           ],
                         ),

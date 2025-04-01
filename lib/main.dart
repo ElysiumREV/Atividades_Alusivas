@@ -11,7 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomePage(), debugShowCheckedModeBanner: false,);
+    return MaterialApp(
+      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
 
@@ -21,51 +24,64 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
-        title: Flexible(
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(
-              "Calendário de Atividades Alusivas Anual",
-              style: TextStyle(
-                fontSize: 32,
-                fontFamily: 'Monda',
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+      backgroundColor: const Color.fromRGBO(0, 23, 31, 1.0),
+      // appBar removido
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20), // Espaço reduzido no topo ou remova se preferir
+                  const Text(
+                    "Calendário de Atividades Alusivas Anual",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontFamily: 'Monda',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 120),
+
+                  _buildButton(context, 'Iniciar', const MenuPage()),
+                  const SizedBox(height: 20),
+                  _buildButton(context, 'Créditos', const CreditsPage()),
+                  const SizedBox(height: 120),
+                  Center(
+                    child: Image.asset(
+                      'assets/images/UnisagradoPequeno.png',
+                      height: 60,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
         ),
-        centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuPage()),
-                );
-              },
-              child: const Text('Iniciar'),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CreditsPage()),
-                );
-              },
-              child: const Text('Créditos'),
-            ),
-          ],
-        ),
+    );
+  }
+
+  Widget _buildButton(BuildContext context, String label, Widget page) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => page),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
+        foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+        textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        minimumSize: const Size(200, 50),
       ),
+      child: Text(label, textAlign: TextAlign.center),
     );
   }
 }

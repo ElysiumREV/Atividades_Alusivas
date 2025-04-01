@@ -10,6 +10,7 @@ class MarcoPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 23, 31, 1.0),
         elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Text('Março',
             style: TextStyle(fontSize: 32,
                 color: Colors.white,
