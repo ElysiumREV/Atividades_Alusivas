@@ -2,11 +2,42 @@ import 'package:atividades_alusivas/main.dart';
 import '/pages/meses/meses.dart';
 import 'package:flutter/material.dart';
 
-class MenuPage extends StatelessWidget {
+class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
 
   @override
+  State<MenuPage> createState() => _MenuPageState();
+}
+
+class _MenuPageState extends State<MenuPage> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      Future.delayed(const Duration(milliseconds: 100), () {
+        if (mounted) {
+          setState(() {});
+        }
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+    int crossAxisCount = MediaQuery.of(context).orientation == Orientation.portrait ? 2 : 3;
+    double aspectRatio = MediaQuery.of(context).orientation == Orientation.portrait ? 2.5 : 3.0;
+
     return Scaffold(
       backgroundColor: const Color.fromRGBO(0, 23, 31, 1.0),
       appBar: AppBar(
@@ -25,53 +56,45 @@ class MenuPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: OrientationBuilder(
-          builder: (context, orientation) {
-            int crossAxisCount = orientation == Orientation.portrait ? 2 : 3;
-            double aspectRatio = orientation == Orientation.portrait ? 2.5 : 3.0;
-
-            return SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(32.0),
-                child: Column(
-                  children: [
-                    GridView(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: crossAxisCount,
-                        crossAxisSpacing: 15,
-                        mainAxisSpacing: 15,
-                        childAspectRatio: aspectRatio,
-                      ),
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      children: [
-                        _buildButton(context, 'Janeiro', const JaneiroPage()),
-                        _buildButton(context, 'Fevereiro', const FevereiroPage()),
-                        _buildButton(context, 'Março', const MarcoPage()),
-                        _buildButton(context, 'Abril', const AbrilPage()),
-                        _buildButton(context, 'Maio', const MaioPage()),
-                        _buildButton(context, 'Junho', const JunhoPage()),
-                        _buildButton(context, 'Julho', const JulhoPage()),
-                        _buildButton(context, 'Agosto', const AgostoPage()),
-                        _buildButton(context, 'Setembro', const SetembroPage()),
-                        _buildButton(context, 'Outubro', const OutubroPage()),
-                        _buildButton(context, 'Novembro', const NovembroPage()),
-                        _buildButton(context, 'Dezembro', const DezembroPage()),
-                      ],
-                    ),
-                    const SizedBox(height: 32), // Espaçamento entre Grid e Imagem
-                    Center(
-                      child: Image.asset(
-                        'assets/images/UnisagradoPequeno.png',
-                        height: 60,
-                      ),
-                    ),
-                    const SizedBox(height: 16), // Espaçamento opcional no final
-                  ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(32.0),
+            child: Column(
+              children: [
+                GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: crossAxisCount,
+                    crossAxisSpacing: 15,
+                    mainAxisSpacing: 15,
+                    childAspectRatio: aspectRatio,
+                  ),
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 12, // Número de meses
+                  itemBuilder: (context, index) {
+                    final meses = [
+                      'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                      'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                    ];
+                    final pages = [
+                      const JaneiroPage(), const FevereiroPage(), const MarcoPage(), const AbrilPage(),
+                      const MaioPage(), const JunhoPage(), const JulhoPage(), const AgostoPage(),
+                      const SetembroPage(), const OutubroPage(), const NovembroPage(), const DezembroPage(),
+                    ];
+                    return _buildButton(context, meses[index], pages[index]);
+                  },
                 ),
-              ),
-            );
-          },
+                const SizedBox(height: 32),
+                Center(
+                  child: Image.asset(
+                    'assets/images/UnisagradoPequeno.png',
+                    height: 60,
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -89,9 +112,9 @@ class MenuPage extends StatelessWidget {
         backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
         foregroundColor: Colors.white,
         textStyle: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Monda'
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'Monda',
         ),
       ),
       child: Text(label, textAlign: TextAlign.center),
