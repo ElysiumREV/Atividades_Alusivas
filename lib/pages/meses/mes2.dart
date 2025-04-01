@@ -46,7 +46,7 @@ class FevereiroPage extends StatelessWidget {
             SizedBox(height: 16),
             Center(
               child: Image.asset(
-                'assets/images/PrevençãoGravidez.png',
+                'assets/images/PrevencaoGravidez.png',
                 height: 150,
               ),
             ),

@@ -25,7 +25,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(0, 23, 31, 1.0),
-      // appBar removido
       body: SafeArea(
         child: Center(
           child: Padding(
