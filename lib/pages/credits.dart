@@ -42,7 +42,7 @@ class CreditsPage extends StatelessWidget {
                           children: [
                             Image.asset('assets/images/nyx.png'),
                             TextButton(
-                              onPressed: (_launchUrlNyx),
+                              onPressed: _launchUrlNyx,
                               style: TextButton.styleFrom(
                                 backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
                                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -59,7 +59,7 @@ class CreditsPage extends StatelessWidget {
                           children: [
                             Image.asset('assets/images/darkzin.png'),
                             TextButton(
-                              onPressed: (_launchUrlDarkzin),
+                              onPressed: _launchUrlDarkzin,
                               style: TextButton.styleFrom(
                                 backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
                                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -76,7 +76,7 @@ class CreditsPage extends StatelessWidget {
                           children: [
                             Image.asset('assets/images/terra.png'),
                             TextButton(
-                              onPressed: (_launchUrlTerra),
+                              onPressed: _launchUrlTerra,
                               style: TextButton.styleFrom(
                                 backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
                                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -93,7 +93,7 @@ class CreditsPage extends StatelessWidget {
                           children: [
                             Image.asset('assets/images/ely.png'),
                             TextButton(
-                              onPressed: (_launchUrlEly),
+                              onPressed: _launchUrlEly,
                               style: TextButton.styleFrom(
                                 backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
                                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -108,6 +108,7 @@ class CreditsPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    const SizedBox(height: 20),
                     const Text(
                       "Desenvolvimento",
                       textAlign: TextAlign.center,
@@ -119,8 +120,11 @@ class CreditsPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Image.asset('assets/images/ciencia_da_computacao.png'),
-                    const SizedBox(height: 10),
+                    GestureDetector(
+                      onTap: _launchUrlDesenvolvimento,
+                      child: Image.asset('assets/images/ciencia_da_computacao.png'),
+                    ),
+                    const SizedBox(height: 20),
                     const Text(
                       "Apoio",
                       textAlign: TextAlign.center,
@@ -132,7 +136,10 @@ class CreditsPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Image.asset('assets/images/coordenadoria_de_extensao.png'),
+                    GestureDetector(
+                      onTap: _launchUrlApoio,
+                      child: Image.asset('assets/images/coordenadoria_de_extensao.png'),
+                    ),
                     const SizedBox(height: 20),
                   ],
                 ),
@@ -143,38 +150,51 @@ class CreditsPage extends StatelessWidget {
       ),
     );
   }
-}
 
-_launchUrlEly() async {
-  final Uri url = Uri.parse('https://www.linkedin.com/in/elysiumrev/');
-  if (!await launchUrl(url)) {
-    throw Exception('Could not launch $url');
+  void _launchUrlEly() async {
+    final Uri url = Uri.parse('https://www.linkedin.com/in/elysiumrev/');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
   }
-}
 
-_launchUrlNyx() async {
-  final Uri url = Uri.parse(
-    'https://www.linkedin.com/in/jo%C3%A3o-vitor-gozzo-bruschi-36447522a/',
-  );
-  if (!await launchUrl(url)) {
-    throw Exception('Could not launch $url');
+  void _launchUrlNyx() async {
+    final Uri url = Uri.parse(
+        'https://www.linkedin.com/in/jo%C3%A3o-vitor-gozzo-bruschi-36447522a/');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
   }
-}
 
-_launchUrlDarkzin() async {
-  final Uri url = Uri.parse(
-    'https://www.linkedin.com/in/jo%C3%A3o-pedro-cabrera-rodrigues-penna-99a078352/',
-  );
-  if (!await launchUrl(url)) {
-    throw Exception('Could not launch $url');
+  void _launchUrlDarkzin() async {
+    final Uri url = Uri.parse(
+        'https://www.linkedin.com/in/jo%C3%A3o-pedro-cabrera-rodrigues-penna-99a078352/');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
   }
-}
 
-_launchUrlTerra() async {
-  final Uri url = Uri.parse(
-    'https://www.linkedin.com/in/jean-yoshida-90285b325/',
-  );
-  if (!await launchUrl(url)) {
-    throw Exception('Could not launch $url');
+  void _launchUrlTerra() async {
+    final Uri url = Uri.parse(
+        'https://www.linkedin.com/in/jean-yoshida-90285b325/');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+
+  void _launchUrlDesenvolvimento() async {
+    final Uri url = Uri.parse(
+        'https://unisagrado.edu.br/graduacao/ciencia-da-computacao');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+
+  void _launchUrlApoio() async {
+    final Uri url = Uri.parse(
+        'https://unisagrado.edu.br/extensao-universitaria/programas-de-extensao');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

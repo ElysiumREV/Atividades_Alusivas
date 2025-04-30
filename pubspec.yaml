@@ -34,8 +34,13 @@ dependencies:
   url_launcher: ^6.3.1
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1 # ou a versão mais recente
   flutter_test:
     sdk: flutter
+
+flutter_launcher_icons:
+  image_path: "assets/icon/icone_app.png"
+  android: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
