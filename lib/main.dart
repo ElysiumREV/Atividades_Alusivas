@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const SizedBox(height: 20), // Espaço reduzido no topo ou remova se preferir
                   const Text(
-                    "Calendário de Atividades Alusivas Anual",
+                    "Calendário de Atividades Alusivas Anuais",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 36,

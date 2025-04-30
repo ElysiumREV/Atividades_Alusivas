@@ -31,11 +31,6 @@ class CreditsPage extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    Image.asset('assets/images/ciencia_da_computacao.png'),
-                    const SizedBox(height: 10),
-                    Image.asset('assets/images/coordenadoria_de_extensao.png'),
-                    const SizedBox(height: 20),
-
                     GridView.count(
                       crossAxisCount: 2,
                       shrinkWrap: true,
@@ -113,6 +108,32 @@ class CreditsPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    const Text(
+                      "Desenvolvimento",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontFamily: 'Monda',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Image.asset('assets/images/ciencia_da_computacao.png'),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Apoio",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontFamily: 'Monda',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Image.asset('assets/images/coordenadoria_de_extensao.png'),
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),

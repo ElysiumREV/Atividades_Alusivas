@@ -64,8 +64,8 @@ class _MenuPageState extends State<MenuPage> with WidgetsBindingObserver {
                 GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: crossAxisCount,
-                    crossAxisSpacing: 15,
-                    mainAxisSpacing: 15,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 35,
                     childAspectRatio: aspectRatio,
                   ),
                   shrinkWrap: true,
@@ -91,7 +91,6 @@ class _MenuPageState extends State<MenuPage> with WidgetsBindingObserver {
                     height: 60,
                   ),
                 ),
-                const SizedBox(height: 16),
               ],
             ),
           ),
