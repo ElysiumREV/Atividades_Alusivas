@@ -56,12 +56,12 @@ class _MenuPageState extends State<MenuPage> with WidgetsBindingObserver {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: Column(
-              children: [
-                GridView.builder(
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(32.0),
+                child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: crossAxisCount,
                     crossAxisSpacing: 20,
@@ -70,7 +70,7 @@ class _MenuPageState extends State<MenuPage> with WidgetsBindingObserver {
                   ),
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 12, // Número de meses
+                  itemCount: 12,
                   itemBuilder: (context, index) {
                     final meses = [
                       'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
@@ -84,16 +84,16 @@ class _MenuPageState extends State<MenuPage> with WidgetsBindingObserver {
                     return _buildButton(context, meses[index], pages[index]);
                   },
                 ),
-                const SizedBox(height: 32),
-                Center(
-                  child: Image.asset(
-                    'assets/images/UnisagradoPequeno.png',
-                    height: 60,
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16),
+              child: Image.asset(
+                'assets/images/UnisagradoPequeno.png',
+                height: 60,
+              ),
+            ),
+          ],
         ),
       ),
     );

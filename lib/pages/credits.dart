@@ -24,129 +24,123 @@ class CreditsPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: OrientationBuilder(
-          builder: (context, orientation) {
-            return SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    GridView.count(
-                      crossAxisCount: 2,
-                      shrinkWrap: true,
-                      crossAxisSpacing: 5,
-                      mainAxisSpacing: 5,
-                      physics: const NeverScrollableScrollPhysics(),
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('assets/images/nyx.png'),
-                            TextButton(
-                              onPressed: _launchUrlNyx,
-                              style: TextButton.styleFrom(
-                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
-                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                              child: const Text(
-                                'Contato',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Image.asset('assets/images/darkzin.png'),
-                            TextButton(
-                              onPressed: _launchUrlDarkzin,
-                              style: TextButton.styleFrom(
-                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
-                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                              child: const Text(
-                                'Contato',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Image.asset('assets/images/terra.png'),
-                            TextButton(
-                              onPressed: _launchUrlTerra,
-                              style: TextButton.styleFrom(
-                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
-                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                              child: const Text(
-                                'Contato',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Image.asset('assets/images/ely.png'),
-                            TextButton(
-                              onPressed: _launchUrlEly,
-                              style: TextButton.styleFrom(
-                                backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
-                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                              child: const Text(
-                                'Contato',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    const Text(
-                      "Desenvolvimento",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'Monda',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    GestureDetector(
-                      onTap: _launchUrlDesenvolvimento,
-                      child: Image.asset('assets/images/ciencia_da_computacao.png'),
-                    ),
-                    const SizedBox(height: 20),
-                    const Text(
-                      "Apoio",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'Monda',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    GestureDetector(
-                      onTap: _launchUrlApoio,
-                      child: Image.asset('assets/images/coordenadoria_de_extensao.png'),
-                    ),
-                    const SizedBox(height: 20),
-                  ],
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              Wrap(
+                spacing: 20,
+                runSpacing: 20,
+                alignment: WrapAlignment.center,
+                children: [
+                  integranteWidget('João Vitor Gozzo Bruschi', 'assets/images/nyx.png', _launchUrlNyx),
+                  integranteWidget('João Pedro Cabrera Rodrigues Penna', 'assets/images/darkzin.png', _launchUrlDarkzin),
+                  integranteWidget('Jean Victor Yoshida Lima', 'assets/images/terra.png', _launchUrlTerra),
+                  integranteWidget('Nícolas Justo Melão', 'assets/images/ely.png', _launchUrlEly),
+                ],
+              ),
+              const SizedBox(height: 30),
+              const Text(
+                "Disciplina: Desenvolvimento de Software",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 22,
+                  fontFamily: 'Monda',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
-            );
-          },
+              const SizedBox(height: 10),
+              const Text(
+                "Professor responsável:\nProf. Dr. Elvio Gilberto da Silva",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontFamily: 'Monda',
+                  color: Colors.white70,
+                ),
+              ),
+              const SizedBox(height: 30),
+              const Text(
+                "Desenvolvimento",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'Monda',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 10),
+              GestureDetector(
+                onTap: _launchUrlDesenvolvimento,
+                child: Image.network(
+                  'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/Ciencia_da_Computacao.jpg',
+                  height: 120,
+                ),
+              ),
+              const SizedBox(height: 30),
+              const Text(
+                "Apoio",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'Monda',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 10),
+              GestureDetector(
+                onTap: _launchUrlApoio,
+                child: Image.network(
+                  'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/coordenadoria-de-extensao.jpg',
+                  height: 120,
+                ),
+              ),
+              const SizedBox(height: 30),
+            ],
+          ),
         ),
+      ),
+    );
+  }
+
+  Widget integranteWidget(String nome, String assetPath, VoidCallback onTapContato) {
+    return SizedBox(
+      width: 160,
+      child: Column(
+        children: [
+          SizedBox(
+            height: 40,
+            child: Text(
+              nome,
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Image.asset(assetPath, height: 120),
+          const SizedBox(height: 8),
+          TextButton(
+            onPressed: onTapContato,
+            style: TextButton.styleFrom(
+              backgroundColor: const Color.fromRGBO(0, 126, 167, 1.0),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            child: const Text(
+              'Contato',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ],
       ),
     );
   }
