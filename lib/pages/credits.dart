@@ -24,82 +24,90 @@ class CreditsPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-              Wrap(
-                spacing: 20,
-                runSpacing: 20,
-                alignment: WrapAlignment.center,
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 600), // limite opcional para centralizar em telas grandes
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(16),
+              child: Column(
                 children: [
-                  integranteWidget('João Vitor Gozzo Bruschi', 'assets/images/nyx.png', _launchUrlNyx),
-                  integranteWidget('João Pedro Cabrera Rodrigues Penna', 'assets/images/darkzin.png', _launchUrlDarkzin),
-                  integranteWidget('Jean Victor Yoshida Lima', 'assets/images/terra.png', _launchUrlTerra),
-                  integranteWidget('Nícolas Justo Melão', 'assets/images/ely.png', _launchUrlEly),
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20,
+                    childAspectRatio: 0.75,
+                    children: [
+                      integranteWidget('João Vitor Gozzo Bruschi', 'assets/images/nyx.png', _launchUrlNyx),
+                      integranteWidget('João Pedro Cabrera Rodrigues Penna', 'assets/images/darkzin.png', _launchUrlDarkzin),
+                      integranteWidget('Jean Victor Yoshida Lima', 'assets/images/terra.png', _launchUrlTerra),
+                      integranteWidget('Nícolas Justo Melão', 'assets/images/ely.png', _launchUrlEly),
+                    ],
+                  ),
+                  const SizedBox(height: 30),
+                  const Text(
+                    "Disciplina: Desenvolvimento de Software",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontFamily: 'Monda',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    "Professor responsável:\nProf. Dr. Elvio Gilberto da Silva",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: 'Monda',
+                      color: Colors.white70,
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+                  const Text(
+                    "Desenvolvimento",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: 'Monda',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  GestureDetector(
+                    onTap: _launchUrlDesenvolvimento,
+                    child: Image.network(
+                      'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/Ciencia_da_Computacao.jpg',
+                      height: 120,
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+                  const Text(
+                    "Apoio",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: 'Monda',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  GestureDetector(
+                    onTap: _launchUrlApoio,
+                    child: Image.network(
+                      'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/coordenadoria-de-extensao.jpg',
+                      height: 120,
+                    ),
+                  ),
+                  const SizedBox(height: 30),
                 ],
               ),
-              const SizedBox(height: 30),
-              const Text(
-                "Disciplina: Desenvolvimento de Software",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontFamily: 'Monda',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 10),
-              const Text(
-                "Professor responsável:\nProf. Dr. Elvio Gilberto da Silva",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontFamily: 'Monda',
-                  color: Colors.white70,
-                ),
-              ),
-              const SizedBox(height: 30),
-              const Text(
-                "Desenvolvimento",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontFamily: 'Monda',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 10),
-              GestureDetector(
-                onTap: _launchUrlDesenvolvimento,
-                child: Image.network(
-                  'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/Ciencia_da_Computacao.jpg',
-                  height: 120,
-                ),
-              ),
-              const SizedBox(height: 30),
-              const Text(
-                "Apoio",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontFamily: 'Monda',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 10),
-              GestureDetector(
-                onTap: _launchUrlApoio,
-                child: Image.network(
-                  'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/coordenadoria-de-extensao.jpg',
-                  height: 120,
-                ),
-              ),
-              const SizedBox(height: 30),
-            ],
+            ),
           ),
         ),
       ),

@@ -1,4 +1,3 @@
-import 'package:atividades_alusivas/main.dart';
 import '/pages/meses/meses.dart';
 import 'package:flutter/material.dart';
 
