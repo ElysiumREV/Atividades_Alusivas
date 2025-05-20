@@ -80,8 +80,8 @@ class CreditsPage extends StatelessWidget {
                   const SizedBox(height: 10),
                   GestureDetector(
                     onTap: _launchUrlDesenvolvimento,
-                    child: Image.network(
-                      'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/Ciencia_da_Computacao.jpg',
+                    child: Image.asset(
+                      'assets/images/ciencia_da_computacao.png',
                       height: 120,
                     ),
                   ),
@@ -99,8 +99,8 @@ class CreditsPage extends StatelessWidget {
                   const SizedBox(height: 10),
                   GestureDetector(
                     onTap: _launchUrlApoio,
-                    child: Image.network(
-                      'https://unisagrado.edu.br/uploads/2008/logotipos/monoliticas_unisagrado/coordenadoria-de-extensao.jpg',
+                    child: Image.asset(
+                      'assets/images/coordenadoria_de_extensao.png',
                       height: 120,
                     ),
                   ),
