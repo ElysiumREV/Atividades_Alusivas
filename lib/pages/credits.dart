@@ -169,7 +169,8 @@ class CreditsPage extends StatelessWidget {
   }
 
   void _launchUrlTerra() async {
-    final Uri url = Uri.parse('https://www.linkedin.com/in/jean-yoshida-90285b325/');
+    final Uri url = Uri.parse(
+        'https://www.linkedin.com/in/jeanyoshida/');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch $url');
     }
