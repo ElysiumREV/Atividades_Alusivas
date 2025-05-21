@@ -26,7 +26,7 @@ class CreditsPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 600), // limite opcional para centralizar em telas grandes
+            constraints: const BoxConstraints(maxWidth: 600),
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -78,12 +78,9 @@ class CreditsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  GestureDetector(
-                    onTap: _launchUrlDesenvolvimento,
-                    child: Image.asset(
-                      'assets/images/ciencia_da_computacao.png',
-                      height: 120,
-                    ),
+                  Image.asset(
+                    'assets/images/ciencia_da_computacao.png',
+                    height: 120,
                   ),
                   const SizedBox(height: 30),
                   const Text(
@@ -97,12 +94,9 @@ class CreditsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  GestureDetector(
-                    onTap: _launchUrlApoio,
-                    child: Image.asset(
-                      'assets/images/coordenadoria_de_extensao.png',
-                      height: 120,
-                    ),
+                  Image.asset(
+                    'assets/images/coordenadoria_de_extensao.png',
+                    height: 120,
                   ),
                   const SizedBox(height: 30),
                 ],
@@ -161,40 +155,21 @@ class CreditsPage extends StatelessWidget {
   }
 
   void _launchUrlNyx() async {
-    final Uri url = Uri.parse(
-        'https://www.linkedin.com/in/jo%C3%A3o-vitor-gozzo-bruschi-36447522a/');
+    final Uri url = Uri.parse('https://www.linkedin.com/in/jo%C3%A3o-vitor-gozzo-bruschi-36447522a/');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch $url');
     }
   }
 
   void _launchUrlDarkzin() async {
-    final Uri url = Uri.parse(
-        'https://www.linkedin.com/in/jo%C3%A3o-pedro-cabrera-rodrigues-penna-99a078352/');
+    final Uri url = Uri.parse('https://www.linkedin.com/in/jo%C3%A3o-pedro-cabrera-rodrigues-penna-99a078352/');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch $url');
     }
   }
 
   void _launchUrlTerra() async {
-    final Uri url = Uri.parse(
-        'https://www.linkedin.com/in/jean-yoshida-90285b325/');
-    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-      throw Exception('Could not launch $url');
-    }
-  }
-
-  void _launchUrlDesenvolvimento() async {
-    final Uri url = Uri.parse(
-        'https://unisagrado.edu.br/graduacao/ciencia-da-computacao');
-    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-      throw Exception('Could not launch $url');
-    }
-  }
-
-  void _launchUrlApoio() async {
-    final Uri url = Uri.parse(
-        'https://unisagrado.edu.br/extensao-universitaria/programas-de-extensao');
+    final Uri url = Uri.parse('https://www.linkedin.com/in/jean-yoshida-90285b325/');
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch $url');
     }
